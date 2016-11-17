@@ -1,0 +1,128 @@
+package pack;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+
+/**
+ * Created by spencer on 19.01.16.
+ */
+public class TestV31Final {
+    public static final int MSECOND = 1000;
+    public static void trueAnswer(long timeSpent) {
+        System.out.println("The answer is true!");
+        System.out.println("You thought " + (timeSpent / MSECOND) + " seconds");
+    }
+
+
+    public static void main(String[] args) throws Exception {
+        ScoreWriter scoreWriter = new ScoreWriter();
+
+
+        long totalTime=0;
+        int GAME_NUMBER=0;
+        Set<Integer> set = new HashSet<>();
+        Map<Integer, String> menu = new HashMap<>();
+        menu.put(1, "Multiply the two numbers");
+        menu.put(2, "Add the two numbers");
+        menu.put(3, "Subtract the two numbers");
+        menu.put(4, "Divide two numbers");
+
+        ActionsHARD actionsHARD = new ActionsHARD();
+        ActionsNORMAL actionsNORMAL = new ActionsNORMAL();
+        ActionsEASY actionsEASY = new ActionsEASY();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter your name: ");
+        String name = reader.readLine();
+
+            while (set.size()!=4){
+                System.out.println("Select a task : ");
+                System.out.println();
+
+                for (int j = 1; j < 5; j++) {
+
+                    if (menu.get(j) != (null)) System.out.println("  " + j + ". " + menu.get(j));
+                }
+
+                try {
+                    GAME_NUMBER = Integer.parseInt(reader.readLine());
+                } catch (NumberFormatException e) {
+                    //System.out.println("Vvedy normalno");
+                }
+
+                if (GAME_NUMBER>0 && GAME_NUMBER<5) {
+
+                    while (set.contains(GAME_NUMBER))
+                    {
+                        System.out.println("This task has already been completed, choose another!");
+                        for (int l = 1; l < 5; l++)
+                        {
+                            if (menu.get(l) != (null))
+                                System.out.println("  " + l + ". " + menu.get(l));
+                        }
+                        try {
+                            GAME_NUMBER = Integer.parseInt(reader.readLine());
+                        } catch (NumberFormatException e) {
+                            //System.out.println("Vvedy norm");
+                        }
+                    }
+
+                }
+                    if (GAME_NUMBER>0 && GAME_NUMBER<5) {
+                        set.add(GAME_NUMBER);
+                        menu.remove(GAME_NUMBER);
+
+                    switch (GAME_NUMBER) {
+                        case 1:
+                            long startTime = System.currentTimeMillis();
+                            actionsNORMAL.multiply();
+                            long finishTime = System.currentTimeMillis() - startTime;
+                            trueAnswer(finishTime);
+                            System.out.println("You have completed "+set.size()+" task(s)");
+                            System.out.println();
+                            totalTime += finishTime / MSECOND;
+                            break;
+                        case 2:
+                            startTime = System.currentTimeMillis();
+                            actionsNORMAL.addition();
+                            finishTime = System.currentTimeMillis() - startTime;
+                            trueAnswer(finishTime);
+                            System.out.println("You have completed "+set.size()+" task(s)");
+                            System.out.println();
+                            totalTime += finishTime / MSECOND;
+                            break;
+                        case 3:
+                            startTime = System.currentTimeMillis();
+                            actionsNORMAL.subtraction();
+                            finishTime = System.currentTimeMillis() - startTime;
+                            trueAnswer(finishTime);
+                            System.out.println("You have completed "+set.size()+" task(s)");
+                            System.out.println();
+                            totalTime += finishTime / MSECOND;
+                            break;
+                        case 4:
+                            startTime = System.currentTimeMillis();
+                            actionsNORMAL.division();
+                            finishTime = System.currentTimeMillis() - startTime;
+                            trueAnswer(finishTime);
+                            System.out.println("You have completed "+set.size()+" task(s)");
+                            System.out.println();
+                            totalTime += finishTime / MSECOND;
+                            break;
+
+                    }
+
+
+                } else System.out.println("This does not exist");
+
+            }
+
+        System.out.println("Total time : " +totalTime+" seconds.");
+        scoreWriter.writeScore(name,totalTime);
+
+    }
+
+
+
+    }
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;k&apos; in &apos;arrays.Main8.main(...)&apos; to &apos;max&apos;&#x0D;&#x0A;- Original project: &apos;HomeWork&apos;&#x0D;&#x0A;- Original element: &apos;arrays.Main8.main(String[]).k&apos;&#x0D;&#x0A;- Renamed element: &apos;k&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;k&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;arrays{Main8.java[Main8~main~\[QString;@k!310!319!314!314!I!0!false" name="max" references="true" stamp="1478724583488" version="1.0"/>
+</session>

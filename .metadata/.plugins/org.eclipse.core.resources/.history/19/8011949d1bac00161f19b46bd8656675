@@ -1,0 +1,32 @@
+package hrestikiNoliki;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	static int [][] playerInput(int array[][]){
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		System.out.println("¬вед≥ть координату р€дка");
+		int playerCoorX = sc.nextInt();
+		System.out.println("¬вед≥ть координату стовпц€");
+		int playerCoorY = sc.nextInt();
+		if (array[playerCoorX][playerCoorY] == 0) {
+			array[playerCoorX][playerCoorY] = 1;
+		} else{
+			while (array[playerCoorX][playerCoorY] != 0){
+				System.out.println("÷€ кл≥тинка зайн€та");
+				System.out.println("¬вед≥ть координату р€дка");
+				playerCoorX = sc.nextInt();
+				System.out.println("¬вед≥ть координату стовпц€");
+				playerCoorY = sc.nextInt();
+			}
+			array[playerCoorX][playerCoorY] = 1;
+		}
+		
+		return array;		
+	}
+
+}
