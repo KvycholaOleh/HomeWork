@@ -1,0 +1,17 @@
+package strObj;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String s1 = "Hello world!";
+		String s2 = "Hello world!";
+		String s3 = "Helllo world!";
+		String s4 = new String("Hello world!");
+		System.out.println(s1.compareTo(s2));
+		System.out.println(s1.compareTo(s3));
+		System.out.println(s1.compareTo(s4));
+		System.out.println(s1.length()-s3.length());
+
+	}
+
+}
