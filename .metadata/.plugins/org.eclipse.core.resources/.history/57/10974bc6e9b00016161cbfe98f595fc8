@@ -1,0 +1,12 @@
+package oop1;
+
+public class Main {
+	
+	Robot r1 = new Robot();
+	CoffeRobot r2= new CoffeRobot();
+	RobotDancer r3 = new RobotDancer();
+	RobotCoocker r4 = new RobotCoocker();
+	r1.work();
+	
+
+}

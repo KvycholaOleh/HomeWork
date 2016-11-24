@@ -1,0 +1,9 @@
+package oop1;
+
+public class CoffeRobot extends Robot {
+	
+	void work(){
+		System.out.println("Ђя CoffeRobot Ц € варю кавуї.");
+	}
+
+}
