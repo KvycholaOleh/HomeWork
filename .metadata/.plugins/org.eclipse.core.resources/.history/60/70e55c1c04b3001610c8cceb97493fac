@@ -1,0 +1,12 @@
+package oop3;
+
+public class EmployeeMonth implements Zarplata {
+	int rateMonth;
+
+	@Override
+	public double zarplata() {
+		return rateMonth;
+	}
+	
+
+}

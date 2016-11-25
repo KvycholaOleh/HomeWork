@@ -1,0 +1,13 @@
+package oop3;
+
+public class EmployeeHour implements Zarplata {
+	
+	int salaryPerHour;
+	int hoursInMonth;
+
+	@Override
+	public double zarplata() {
+		return salaryPerHour*hoursInMonth;
+	}
+
+}
