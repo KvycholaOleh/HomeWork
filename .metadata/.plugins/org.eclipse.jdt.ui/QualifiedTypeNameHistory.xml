@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="oop1.CoffeRobot"/>
 <fullyQualifiedTypeName name="oop1.RobotDancer"/>
 <fullyQualifiedTypeName name="oop1.RobotCoocker"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="oop1.MyMath"/>
+<fullyQualifiedTypeName name="oop3.EmployeeHour"/>
+<fullyQualifiedTypeName name="oop3.Zarplata"/>
+<fullyQualifiedTypeName name="oop3.EmployeeMonth"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="user.UsersInterface"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 </qualifiedTypeNameHistroy>

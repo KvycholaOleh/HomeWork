@@ -1,0 +1,8 @@
+package user;
+
+public interface UsersInterface {
+	
+	Object createUser(String name, int age);
+	void deleteUser();
+	Object [] showUsers();
+}

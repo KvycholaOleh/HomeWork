@@ -1,0 +1,8 @@
+package user;
+
+public interface Users {
+	
+	Object createUser();
+	void deleteUser();
+	Object [] showUsers();
+}
