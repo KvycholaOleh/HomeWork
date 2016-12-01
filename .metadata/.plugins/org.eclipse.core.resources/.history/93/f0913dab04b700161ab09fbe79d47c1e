@@ -1,0 +1,38 @@
+package oop6;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import oop4.Body;
+import oop4.Car;
+import oop4.Disc;
+import oop4.Wheel;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Car> cars = new ArrayList<Car>();
+		cars.add(new Car("BMW", new Wheel("Skin",10), new Disc(18,"Metal", false), new Body("Red","Hatchback")));
+		cars.add(new Car("Mercedes", new Wheel("Skin",11), new Disc(20,"Metal", true), new Body("Blue","Sedan")));
+		cars.add(new Car("Volkswagen", new Wheel("Plastic",10), new Disc(16,"Metal", false), new Body("Black","Universal")));
+		cars.add(new Car("Subaru", new Wheel("Skin",12), new Disc(19,"Titan", true), new Body("Blue","Hatchback")));
+		cars.add(new Car("Lamborghini", new Wheel("Skin",9), new Disc(20,"Titan", true), new Body("Yellow","Coupe")));
+		cars.add(new Car("Mitsubishi", new Wheel("Plastic",8), new Disc(16,"Metal", false), new Body("White","Sedan")));
+		cars.add(new Car("Rebault", new Wheel("Skin",9), new Disc(16,"Titan", true), new Body("Blue","Universal")));
+		cars.add(new Car("Hummer", new Wheel("Skin",13), new Disc(22,"Titan", true), new Body("Yellow","Hatchback")));
+		
+//		for(Car car : cars){
+//			System.out.println(car);
+//		}
+
+	}
+	
+	public void searchDiameterDisc(List<Car> list, int yourDiameter){
+		for(Car car : list){
+			if (car.getDisc().getDiametr()==yourDiameter) {
+				System.out.println(car);
+			}
+		}
+	}
+
+}

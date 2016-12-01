@@ -1,0 +1,45 @@
+package oop4;
+
+public class Disc {
+	
+	private int diametr;
+	private String material;
+	
+	public Disc(int diametr, String material) {
+		this.diametr = diametr;
+		this.material = material;
+	}
+	
+	public Disc(){}
+	
+	public void changeDiametr(int newDiametr){
+		this.diametr=newDiametr;
+	}
+
+	public int getDiametr() {
+		return diametr;
+	}
+
+	public void setDiametr(int diametr) {
+		this.diametr = diametr;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	@Override
+	public String toString() {
+		return "Disc [diametr=" + diametr + ", material=" + material + "]";
+	}
+	
+	
+	
+	
+	
+
+}

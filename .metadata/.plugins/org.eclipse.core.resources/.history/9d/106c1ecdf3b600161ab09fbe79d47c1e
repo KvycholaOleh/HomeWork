@@ -1,0 +1,10 @@
+package oop4;
+
+public class Wheel {
+	
+	private String material;
+	private int diametr;
+	
+	
+
+}

@@ -13,4 +13,11 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="oop4.ColorBody"/>
+<fullyQualifiedTypeName name="oop4.TypeBody"/>
+<fullyQualifiedTypeName name="oop4.TypeDisc"/>
+<fullyQualifiedTypeName name="oop4.TypeWheel"/>
+<fullyQualifiedTypeName name="oop4.Car"/>
 </qualifiedTypeNameHistroy>

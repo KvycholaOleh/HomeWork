@@ -1,0 +1,16 @@
+package oop4;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Car car = new Car("BMW", new Wheel("Skin",10), new Disc(18,TypeDisc.METAL, false), new Body(ColorBody.RED,TypeBody.HATCHBACK));
+		System.out.println(car);
+		car.getWheel().changeMaterial("Plastic");
+		car.getDisc().changeDiametr(19);
+		car.getBody().changeColor(ColorBody.BLACK);
+		System.out.println(car);
+		
+
+	}
+
+}

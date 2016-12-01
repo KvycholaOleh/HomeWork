@@ -1,0 +1,58 @@
+package oop4;
+
+public class Disc {
+	
+	private int diametr;
+	private String material;
+	private boolean buttons;
+	
+	public Disc(int diametr, String material, boolean hasButtons) {
+		this.diametr = diametr;
+		this.material = material;
+		this.buttons = hasButtons;
+	}
+
+	public Disc(){}
+	
+	public void changeDiametr(int newDiametr){
+		this.diametr=newDiametr;
+	}
+
+	public int getDiametr() {
+		return diametr;
+	}
+
+	public void setDiametr(int diametr) {
+		this.diametr = diametr;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public boolean isButtons() {
+		return buttons;
+	}
+
+	public void setButtons(boolean buttons) {
+		this.buttons = buttons;
+	}
+
+	@Override
+	public String toString() {
+		return "Disc [diametr=" + diametr + ", material=" + material
+				+ ", buttons=" + buttons + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

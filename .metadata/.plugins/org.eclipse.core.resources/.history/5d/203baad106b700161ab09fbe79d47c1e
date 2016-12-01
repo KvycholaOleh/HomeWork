@@ -1,0 +1,5 @@
+package oop4;
+
+public enum TypeDisc {
+
+}
