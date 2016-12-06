@@ -1,6 +1,7 @@
 package oop6;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import oop4.Body;
@@ -29,15 +30,24 @@ public class Main {
 //			System.out.println(car);
 //		}
 		
-		searchDiameterDisc(cars,16);
-		System.out.println();
-		searchDiameterDiscAndColour(cars, 16, "BLACK");
-		System.out.println();
-		redCarsChangeWheel(cars);
-		System.out.println();
-		ifButtonsDoubleDiameter(cars);
-		System.out.println();
-		changeCarIfDiameterLess(cars,17);
+//		searchDiameterDisc(cars,16);
+//		System.out.println();
+//		searchDiameterDiscAndColour(cars, 16, "Black");
+//		System.out.println();
+//		redCarsChangeWheel(cars);
+//		System.out.println();
+//		ifButtonsDoubleDiameter(cars);
+//		System.out.println();
+//		changeCarIfDiameterLess(cars,17);
+//		System.out.println();
+//		findCarOnBodyType(cars, "sedan");
+//		System.out.println();
+//		removeIfColorEquals(cars,"blue");
+//		System.out.println();
+//		changeTypeDisc(cars,15,23);
+//		System.out.println();
+		deleteCarOnBodyTypeAndWheelDiameter(cars, "hatchback", 8, 14);
+
 		
 
 	}
@@ -53,7 +63,7 @@ public class Main {
 	
 	public static void searchDiameterDiscAndColour(List<Car> list, int yourDiameter, String yourColor){
 		for(Car car : list){
-			if (car.getDisc().getDiametr()==yourDiameter&&car.getBody().getColor().name()==yourColor.toUpperCase()) {
+			if (car.getDisc().getDiametr()==yourDiameter&&car.getBody().getColor().name().equals(yourColor.toUpperCase())) {
 				System.out.println(car);
 			}
 		}
@@ -80,15 +90,67 @@ public class Main {
 	}
 	
 	public static void changeCarIfDiameterLess(List<Car> list, int checkDiameter) {
-		Car[] arr = (Car[]) list.toArray();
-		for (int i = 0; i < list.size(); i++) {
-			if (arr[i].getDisc().getDiametr()<checkDiameter) {
-				list.add(i, new Car("Chrysler", new Wheel(TypeWheel.SKIN,13,true), new Disc(19,TypeDisc.TITAN), new Body(ColorBody.BLACK,TypeBody.SUV)));
-				list.remove(i+1);
+		for(Car car : list){
+			if(car.getDisc().getDiametr()<checkDiameter){
+				list.set(list.indexOf(car), new Car("Chrysler", new Wheel(TypeWheel.SKIN,13,true), new Disc(19,TypeDisc.TITAN), new Body(ColorBody.BLACK,TypeBody.SUV)));
+			
+			}
+		}
+		
+		for(Car car : list){
+			System.out.println(car);
+		}
+	}
+	
+	
+	public static void findCarOnBodyType(List<Car> list, String checkBodyType){
+		Iterator<Car> iter = list.iterator();
+		while(iter.hasNext()){
+			Car tmp = iter.next();
+			if (tmp.getBody().getType().name().equals(checkBodyType.toUpperCase())) {
+				System.out.println(tmp);
+			}
+		}
+	}
+	
+	
+	public static void removeIfColorEquals(List<Car> list, String checkBodyColor){
+		Iterator<Car> iter = list.iterator();
+		while(iter.hasNext()){
+			Car tmp = iter.next();
+			if (tmp.getBody().getColor().name().equals(checkBodyColor.toUpperCase())) {
+				iter.remove();
 			}
 		}
 		for(Car car : list){
-			
+			System.out.println(car);
+		}
+	}
+	
+	
+	public static void changeTypeDisc(List<Car> list, int minDiameter, int maxDiameter){
+		Iterator<Car> iter = list.iterator();
+		while(iter.hasNext()){
+			Car tmp = iter.next();
+			if (tmp.getDisc().getDiametr()<maxDiameter&&tmp.getDisc().getDiametr()>minDiameter) {
+				tmp.getDisc().setMaterial(TypeDisc.TITAN);
+			}
+		}
+		for(Car car : list){
+			System.out.println(car);
+		}
+	}
+	
+	
+	public static void deleteCarOnBodyTypeAndWheelDiameter(List<Car> list, String checkBodyType, int minDiameter, int maxDiameter){
+		Iterator<Car> iter = list.iterator();
+		while(iter.hasNext()){
+			Car tmp = iter.next();
+			if (tmp.getBody().getType().name().equals(checkBodyType.toUpperCase()) && tmp.getWheel().getDiametr()<maxDiameter && tmp.getWheel().getDiametr()>minDiameter) {
+				iter.remove();
+			}
+		}
+		for(Car car : list){
 			System.out.println(car);
 		}
 	}

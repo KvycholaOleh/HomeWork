@@ -1,5 +1,0 @@
-package oop3;
-
-public interface Zarplata {
-	double zarplata();
-}

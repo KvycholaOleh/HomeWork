@@ -41,6 +41,37 @@ public class Wheel {
 	public void setButtons(boolean buttons) {
 		this.buttons = buttons;
 	}
+	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (buttons ? 1231 : 1237);
+		result = prime * result + diametr;
+		result = prime * result
+				+ ((material == null) ? 0 : material.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Wheel other = (Wheel) obj;
+		if (buttons != other.buttons)
+			return false;
+		if (diametr != other.diametr)
+			return false;
+		if (material != other.material)
+			return false;
+		return true;
+	}
 
 	@Override
 	public String toString() {

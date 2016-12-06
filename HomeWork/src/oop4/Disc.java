@@ -32,6 +32,34 @@ public class Disc {
 	public void setMaterial(TypeDisc material) {
 		this.material = material;
 	}
+	
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + diametr;
+		result = prime * result
+				+ ((material == null) ? 0 : material.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Disc other = (Disc) obj;
+		if (diametr != other.diametr)
+			return false;
+		if (material != other.material)
+			return false;
+		return true;
+	}
 
 	@Override
 	public String toString() {
