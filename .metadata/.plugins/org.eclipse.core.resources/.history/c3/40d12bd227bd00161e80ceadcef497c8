@@ -1,0 +1,32 @@
+package compare;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Controller controller = new Controller();
+		while (true) {
+			switch (sc.next()) {
+			case "1":
+
+				break;
+			case "2":
+
+				break;
+			case "3":
+
+				break;
+			case "4":
+
+				break;
+
+			default:
+				break;
+			}
+		}
+
+	}
+
+}

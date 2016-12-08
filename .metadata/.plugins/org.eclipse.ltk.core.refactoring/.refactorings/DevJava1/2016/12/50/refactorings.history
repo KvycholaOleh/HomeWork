@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;HomeWork/src/zoo&apos;&#x0D;&#x0A;- Original project: &apos;DevJava1&apos;&#x0D;&#x0A;- Destination element: &apos;HomeWork/src/zoo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     core.less6.Person.java&#x0D;&#x0A;     core.less6.Gender.java" description="Copy compilation units" destination="=HomeWork/src&lt;zoo" element1="/src&lt;core.less6{Person.java" element2="/src&lt;core.less6{Gender.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1481110389875" units="2" version="1.0"/>
+</session>

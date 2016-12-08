@@ -1,0 +1,67 @@
+package zoo;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class Zooclub {
+	
+	private List<Pet> list;
+	private Map<Person,List<Pet>> map;
+	private Set<Entry<Person,List<Pet>>> set;
+	private Iterator<Entry<Person,List<Pet>>> iter;
+	
+	public Zooclub(){
+//		list = new ArrayList<>();
+//		map = new HashMap<>();
+//		set = map.entrySet();
+//		iter = set.iterator();
+	}
+
+	public List<Pet> getList() {
+		return list;
+	}
+
+	public void setList(List<Pet> list) {
+		this.list = list;
+	}
+
+	public Map<Person, List<Pet>> getMap() {
+		return map;
+	}
+
+	public void setMap(Map<Person, List<Pet>> map) {
+		this.map = map;
+	}
+
+	public Set<Entry<Person, List<Pet>>> getSet() {
+		return set;
+	}
+
+	public void setSet(Set<Entry<Person, List<Pet>>> set) {
+		this.set = set;
+	}
+
+	public Iterator<Entry<Person, List<Pet>>> getIter() {
+		return iter;
+	}
+
+	public void setIter(Iterator<Entry<Person, List<Pet>>> iter) {
+		this.iter = iter;
+	}
+
+	@Override
+	public String toString() {
+		return "Zooclub [list=" + list + ", map=" + map + ", set=" + set
+				+ ", iter=" + iter + "]";
+	}
+	
+	
+	
+	
+
+}

@@ -13,6 +13,8 @@ public class Car {
 		this.disc = disc;
 		this.body = body;
 	}
+	
+	public Car(){}
 
 	public String getName() {
 		return name;

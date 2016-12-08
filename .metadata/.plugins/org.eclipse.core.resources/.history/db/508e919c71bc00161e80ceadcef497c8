@@ -1,0 +1,13 @@
+package zoo;
+
+public class Pet {
+	
+	private String name;
+	private String kindAnimal;
+	private int age;
+	private Gender gender;
+	
+	
+	
+
+}
