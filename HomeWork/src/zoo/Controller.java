@@ -1,16 +1,26 @@
 package zoo;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
 
 
 public class Controller {
-	Zooclub zo = new Zooclub();
+	Zooclub zo = readFromFile();
 	final Scanner sc = new Scanner(System.in);
-	
+		
 	public void addPerson(){
 		System.out.println("Enter name");
 		String name = sc.next();
@@ -20,10 +30,6 @@ public class Controller {
 		Gender gender = sc.nextInt()==1 ? Gender.MALE : Gender.FEMALE;
 		zo.map.put(new Person(age, name, gender), new ArrayList());
 		
-//		for(Entry<Person,List<Pet>> entry : zo.set){
-//			Person person = entry.getKey();
-//				System.out.println(person+" -> ");
-//		}
 	}
 	
 	public void addPetToMember(){
@@ -48,19 +54,30 @@ public class Controller {
 	public void deletePetFromMember(){
 		System.out.println("Enter member name");
 		String memberName = sc.next();
-		System.out.println("Enter pet name");
-		String petName = sc.next();
+		
 		for(Entry<Person,List<Pet>> entry : zo.set){
 			Person person = entry.getKey();
 			if (person.getName().equals(memberName)) {
-				for(Pet pet : entry.getValue()){
-					if (pet.getName().equals(petName)) {
-						zo.map.get(person).remove(pet);
-					}
-				}
+				System.out.println("Enter pet name");
+				String petName = sc.next();
+				zo.map.get(person).removeIf(p -> p.getName().equals(petName));
 			}
-		}
+			}
 	}
+	
+	
+	public void deletePetFromAllMembers(){
+		System.out.println("Enter type of pet to remove");
+		String petName = sc.next();
+		
+		for(Entry<Person,List<Pet>> entry : zo.set){
+			Person person = entry.getKey();
+				zo.map.get(person).removeIf(p -> p.getKindAnimal().equals(petName));
+			
+			}
+	}
+	
+	
 	
 	public void deleteMember(){
 		System.out.println("Enter member name");
@@ -82,6 +99,33 @@ public class Controller {
 			}
 			System.out.println();
 		}
+		for (Pet pet : zo.list) {
+			System.out.println(pet);
+		}
+		System.out.println(zo);
+	}
+	
+	public void saveToFile(){
+		try (OutputStream os = new FileOutputStream(new File("collection.zoo"));ObjectOutputStream oos = new ObjectOutputStream(os)) {
+			oos.writeObject(zo);
+			oos.flush();
+		} catch (IOException e) {
+		}
+	}
+	
+	public Zooclub readFromFile(){
+		File file = new File("collection.zoo");
+		if (file.exists()) {
+			try (InputStream is = new FileInputStream(file);ObjectInputStream ois = new ObjectInputStream(is)) {
+				Zooclub obj = (Zooclub) ois.readObject();
+					return obj;
+				
+			} catch (Exception e) {
+			}
+		}
+		return new Zooclub();
+		
+		
 	}
 	
 	

@@ -1,0 +1,12 @@
+package except;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Methods.add(-1, -1);
+		Methods.add(0, -1);
+		Methods.add(0, 0);
+		
+	}
+
+}

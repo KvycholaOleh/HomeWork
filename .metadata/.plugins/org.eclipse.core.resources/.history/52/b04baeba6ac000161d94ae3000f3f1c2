@@ -1,0 +1,25 @@
+package except;
+
+public class Methods {
+	
+	public static double add(int a, int b){
+		if (a<0 || b<0) {
+			throw new IllegalArgumentException("a || b < 0");
+		}
+		
+		return a+b;
+	}
+	
+	public static double sub(int a, int b){
+		return a-b;
+	}
+	
+	public static double mult(int a, int b){
+		return a*b;
+	}
+	
+	public static double div(int a, int b){
+		return a/b;
+	}
+
+}

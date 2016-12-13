@@ -1,5 +1,6 @@
 package zoo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -8,8 +9,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class Zooclub {
-	
+public class Zooclub implements Serializable {
+
+	private static final long serialVersionUID = 4372840357342590003L;
 	List<Pet> list;
 	Map<Person,List<Pet>> map;
 	Set<Entry<Person,List<Pet>>> set;

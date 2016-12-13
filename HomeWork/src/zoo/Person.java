@@ -1,6 +1,13 @@
 package zoo;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2181888837511340267L;
 
 	private int age;
 	

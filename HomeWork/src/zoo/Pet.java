@@ -1,7 +1,11 @@
 package zoo;
 
-public class Pet {
+import java.io.Serializable;
+
+public class Pet implements Serializable{
 	
+
+	private static final long serialVersionUID = -3736997515259307333L;
 	private String name;
 	private String kindAnimal;
 	private int age;
