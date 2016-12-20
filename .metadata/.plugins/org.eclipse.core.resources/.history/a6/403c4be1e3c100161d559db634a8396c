@@ -1,0 +1,7 @@
+package nested;
+
+public class Collection {
+	
+	Object[] array;
+
+}

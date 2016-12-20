@@ -1,0 +1,11 @@
+package thrd;
+
+public class Main {
+
+	public static void main(String[] args) {
+		new MyThread(5);
+		new RunnableThread(5);
+
+	}
+
+}

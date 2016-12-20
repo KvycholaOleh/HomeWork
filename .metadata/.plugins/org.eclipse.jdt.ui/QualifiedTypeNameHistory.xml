@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="oop3.EmployeeHour"/>
 <fullyQualifiedTypeName name="oop3.Zarplata"/>
 <fullyQualifiedTypeName name="oop3.EmployeeMonth"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="user.UsersInterface"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -35,7 +34,6 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="zoo.Zooclub"/>
 <fullyQualifiedTypeName name="zoo.Person"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="zoo.Pet"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
@@ -46,4 +44,13 @@
 <fullyQualifiedTypeName name="java.lang.Throwable"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="nested.Collection"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="thrd.MyThread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="thrd.RunnableThread"/>
+<fullyQualifiedTypeName name="reflection.Car"/>
+<fullyQualifiedTypeName name="reflection.Wheel"/>
 </qualifiedTypeNameHistroy>

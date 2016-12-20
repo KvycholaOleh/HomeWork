@@ -1,0 +1,16 @@
+package reflection;
+
+import java.lang.reflect.Field;
+
+public class Main {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class<?> carClass = Class.forName("reflection.Car");
+		
+		for(Field field : carClass.getDeclaredFields()){
+			System.out.println(field.getName());
+		}
+
+	}
+
+}

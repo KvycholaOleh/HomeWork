@@ -1,5 +1,0 @@
-package except;
-
-public class MyException {
-
-}

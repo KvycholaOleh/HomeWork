@@ -1,0 +1,32 @@
+package thrd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyThread extends Thread{
+	
+	private int num;
+
+	public MyThread(int num) {
+		this.num = num;
+		new Thread(this).start();
+	}
+
+	@Override
+	public void run() {
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(1);
+		for (int i = 2; i < num; i++) {
+			list.add(i, list.get(i-1)+list.get(i-2));
+		}
+		for (Integer integer : list) {
+			System.out.print(integer+" ");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+		}
+	}
+	
+}
